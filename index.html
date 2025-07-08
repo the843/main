@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلة العمر للمتقاعدين | اكتشف جمال المغرب بوتيرة هادئة</title>
+    <meta name="description" content="رحلات سياحية فاخرة مصممة خصيصًا للمتقاعدين، اكتشف المغرب بكل راحة وأمان مع خبرائنا">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <style>
+  body {
+    margin: 0;
+  }
+  .swiper {
+    width: 100%;
+    height: 400px; /* يمكنك تعديل الارتفاع */
+  }
+  @media (min-width: 768px) {
+    .swiper {
+      height: 800px; /* ارتفاع أكبر على الشاشات الكبيرة */
+    }
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --primary-light: #3498db;
+            --secondary: #f1c40f;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #34495e;
+            --white: #fff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, var(--accent) 0%, #c0392b 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            box-shadow: none;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            display: block;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-center .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Header */
+        .header {
+            height: 50vh;
+            min-height: 700px;
+            color: var(--white);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .header-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+            will-change: transform;
+        }
+        
+        .header-slide {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: opacity 0.8s ease;
+            opacity: 0;
+        }
+        
+        .header-slide.active {
+            opacity: 5;
+        }
+        
+        .header-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+        }
+        
+        .header-content {
+            max-width: 600px;
+            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--secondary);
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: var(--white);
+        }
+        
+        .header-scroll {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 1s infinite;
+            z-index: 2;
+            color: var(--white);
+        }
+        
+        .header-dots {
+            position: absolute;
+            bottom: 30px;
+            right: 50%;
+            transform: translateX(50%);
+            display: flex;
+            gap: 10px;
+            z-index: 2;
+        }
+        
+        .header-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .header-dot.active {
+            background-color: var(--secondary);
+            transform: scale(1.2);
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            transition: var(--transition);
+            background-color: rgba(44, 62, 80, 0.9);
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(44, 62, 80, 0.95);
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .highlight {
+            color: var(--secondary);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 30px;
+        }
+        
+        .nav-link {
+            color: var(--white);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .hero-text {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: var(--white);
+        }
+        
+        .hero-image {
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .hero-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Features */
+        .features {
+            background-color: var(--white);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(135deg, var(--white) 0%, var(--light) 100%);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        /* Destinations */
+        .destinations {
+            background-color: var(--light);
+        }
+        
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .destination-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .destination-image {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .destination-card:hover .destination-image {
+            transform: scale(1.05);
+        }
+        
+        .destination-content {
+            padding: 25px;
+        }
+        
+        .destination-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .destination-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .destination-price {
+            font-size: 1.3rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .destination-rating {
+            color: var(--secondary);
+        }
+        
+        .destination-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 73, 94, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            position: relative;
+        }
+        
+        .testimonials .section-title:after {
+            background-color: var(--secondary);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 30px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.2;
+            line-height: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--secondary);
+        }
+        
+        .testimonial-author-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-author-role {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(241, 196, 15, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-text {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* About */
+        .about {
+            background-color: var(--white);
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .about-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        .about-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .about-text {
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .about-feature-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        
+        /* Contact */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-left: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(44, 62, 80, 0.2);
+        }
+        
+        .contact-title {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .contact-detail {
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            color: var(--white);
+            font-weight: 500;
+            transition: var(--transition);
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn i {
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(18, 140, 126, 0.4);
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a252f 100%);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+            color: var(--white);
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-text {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--white);
+        }
+        
+        .social-link:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .footer-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-link {
+            margin-bottom: 10px;
+            opacity: 0.8;
+            transition: var(--transition);
+            color: var(--white);
+        }
+        
+        .footer-link:hover {
+            opacity: 1;
+            padding-right: 5px;
+            color: var(--secondary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .section {
+                padding: 80px 0;
+            }
+            
+            .hero-container,
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .hero-content,
+            .about-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .header-title {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background-color: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-item {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-title {
+                font-size: 2.5rem;
+            }
+            
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+            
+            .header-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">
+                <img src="./logo.png" alt="لوجو رحلات المتقاعدين" class="logo-img">
+                <span class="logo-text">جمعية بلا حدود <span class="highlight">لتنمية والتنشيط السياحي</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li class="nav-item"><a href="#destinations" class="nav-link">الرحلات</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link">لماذا نحن؟</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">من نحن</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- الشرائح -->
+    <div class="swiper-slide"><img src="https://i.ibb.co/0RGqx48M/Whats-App-Image-2025-07-07-at-7-10-08-PM.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://i.ibb.co/spPN865t/4c7855fe-a408-4deb-9895-c110d44a9a14.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://www.naturallymorocco.co.uk/cms/destinations/8_6399d341002d4s_0.jpg?v=1686742378" alt=""></div>
+    <div class="swiper-slide"><img src="https://www.muchbetteradventures.com/magazine/content/images/2022/09/Chefchaouen-aerial.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://i.ibb.co/Wp7nZnQ6/1ba1fb3c-ed93-4a2c-8040-2ade3b286da5.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://www.kasbahdutoubkal.com/assets/img/travel/mek/marrakech-walls-and-atlas.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/517409243.jpg?k=42473d7190b73590e35d9fd6ba5474d84bc1b5a6873f313ba926196995a32fe1&o=&hp=1" alt=""></div>
+  </div>
+
+  <!-- لو تحب نقاط التنقل -->
+  <div class="swiper-pagination"></div>
+
+  <!-- لو تحب أسهم -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+    
+    <!-- Hero Section -->
+    <section class="section hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2 class="hero-title">رحلات المتقاعدين والمتقاعدات المغاربة" هي فضاء تواصلي وترفيهي مخصص لفئة المتقاعدين من أبناء وبنات الوطن</h2>
+                <p class="hero-text">تهدف إلى تعزيز الروابط الاجتماعية وتنظيم رحلات استكشافية داخل وخارج المغرب، لتمكين الأعضاء من الاستمتاع بأوقاتهم بعد سنوات من العطاء.</p>
+                 <p class="hero-text">أهداف المجموعة:
+
+تنظيم خرجات سياحية وثقافية متنوعة.
+بناء صداقات جديدة وتبادل التجارب الحياتية.
+اكتشاف مناطق المغرب الجميلة والاستمتاع بجمال الطبيعة والتراث.
+خلق أجواء من الفرح والأنس في جو عائلي وداعم.     رحلات المتقاعدين تقدم تجربة سياحية فريدة
+نحن نخصص كل رحلاتنا لكبار السن، مع مراعاة كل التفاصيل التي تضمن راحتهم وأمانهم. من وسائل النقل المريحة إلى الإقامة في فنادق مميزة، وبرامج سياحية مصممة بوتيرة هادئة.</p>
+                <a href="#about" class="btn btn-secondary">تعرف علينا أكثر</a>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://i.ibb.co/W47JzFfs/Whats-App-Image-2025-07-07-at-3-10-08-PM.jpg" alt="مجموعة سياح متقاعدين في المغرب">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="section features" id="features">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">لماذا تختار رحلة العمر؟</span>
+                <h2 class="section-title">تجربة سياحية لا تضاهى</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="feature-title">رعاية صحية</h3>
+                    <p>مرافقون طبيون في كل الرحلات، وصيدلية متنقلة، وضمان الوصول السريع للرعاية الطبية عند الحاجة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-accessible-icon"></i>
+                    </div>
+                    <h3 class="feature-title">سهولة الوصول</h3>
+                    <p>وسائل نقل مريحة، فنادق مجهزة لكبار السن، مسارات سهلة بدون عقبات أو سلالم</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature-title">وتيرة مريحة</h3>
+                    <p>برامج سياحية بدون إجهاد، مع فترات راحة كافية، وجدول زمني مرن قابل للتعديل</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="feature-title">سلامة وأمان</h3>
+                    <p>فريق مدرب على التعامل مع كبار السن، تأمين طبي شامل، ومراقبة مستمرة طوال الرحلة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="feature-title">طعام صحي</h3>
+                    <p>وجبات معدّة خصيصًا لكبار السن، مع مراعاة الحميات الغذائية المختلفة والاحتياجات الخاصة</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">دعم مستمر</h3>
+                    <p>فريق دعم متاح 24/7، مترجمين إذا لزم الأمر، ومرشدين سياحيين متخصصين في التعامل مع المتقاعدين</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Destinations -->
+    <section class="section destinations" id="destinations">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">اكتشف أجمل الوجهات</span>
+                <h2 class="section-title">رحلاتنا المميزة</h2>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <span class="destination-tag">الأكثر طلبًا</span>
+                    <img src="https://i.ibb.co/W4gfmbBc/eda9d996-d416-4c8f-8209-db94e4ad797c.jpg" alt="شفشاون" class="destination-image">
+                    <div class="destination-content">
+                        <h3 class="destination-title">أكادير</h3>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-calendar-alt"></i> "3" أيام</span>
+                            <span><i class="fas fa-users"></i> عشرون شخص</span>
+                        </div>
+                        <p>حيث الرمال الذهبية و المضايق العالية و الشواطئ النقية كل هذا و اكثر في رحلة واحدة.
+♍بثمن جد مناسب   . سارعوا بحجز مقعدكم.</p>
+                        <div class="destination-price">1500 درهم</div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="مراكش" class="destination-image">
+                    <div class="destination-content">
+                        <h3 class="destination-title">مراكش الحمراء</h3>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 4 أيام</span>
+                            <span><i class="fas fa-users"></i> مجموعة صغيرة</span>
+                        </div>
+                        <p>اكتشف سحر المدينة الحمراء مع جولات في الحدائق التاريخية، والسوق القديم، مع فترات راحة كافية.</p>
+                        <div class="destination-price">2,500 درهم</div>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <span class="destination-tag">جديد</span>
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="الصحراء المغربية" class="destination-image">
+                    <div class="destination-content">
+                        <h3 class="destination-title">الصحراء المغربية</h3>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 5 أيام</span>
+                            <span><i class="fas fa-users"></i> 15 شخص</span>
+                        </div>
+                        <p>تجربة لا تنسى في أحضان الصحراء مع رحلات الجمال ومبيت في الخيام الفاخرة تحت النجوم.</p>
+                        <div class="destination-price">3,200 درهم</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="#contact" class="btn">احجز رحلتك الآن</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">آراء عملائنا</span>
+                <h2 class="section-title">تجارب حقيقية</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>أفضل رحلة في حياتي بعد التقاعد! كل التفاصيل كانت مدروسة لراحتنا، الفريق كان محترفًا جدًا ومتفهمًا لاحتياجاتنا ككبار سن.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="سعاد" class="testimonial-author-img">
+                        <div>
+                            <h4 class="testimonial-author-name">سعاد العلوي</h4>
+                            <span class="testimonial-author-role">متقاعدة - رحلة شفشاون</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>لم أتوقع أن أتمكن من زيارة الصحراء في عمري هذا، ولكن بفضل التنظيم الممتاز والرعاية الصحية، كانت تجربة لا تنسى.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="عبد الرحيم" class="testimonial-author-img">
+                        <div>
+                            <h4 class="testimonial-author-name">عبد الرحيم الفاسي</h4>
+                            <span class="testimonial-author-role">متقاعد - رحلة الصحراء</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>أشكر الفريق على صبرهم واهتمامهم بنا، كانوا دائمًا مستعدين لمساعدتنا وتعديل البرنامج حسب طاقتنا. نوصي بهم لكل المتقاعدين.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="فاطمة" class="testimonial-author-img">
+                        <div>
+                            <h4 class="testimonial-author-name">فاطمة الزهراء</h4>
+                            <span class="testimonial-author-role">متقاعدة - رحلة مراكش</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About -->
+    <section class="section about" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://i.ibb.co/1ftxQCBt/rootbackground.jpg" alt="فريق رحلات المتقاعدين">
+            </div>
+            
+            <div class="about-content">
+                <span class="section-subtitle">من نحن</span>
+                <h2 class="section-title about-title">جمعية بلا حدود لتنمية والتنشيط السياحي</h2>
+                <p class="about-text">نحن فريق من خبراء السياحة وكبار السن الذين يؤمنون بأن التقاعد هو بداية مرحلة جديدة من الاستكشاف والمتعة. تأسست مجموعتنا عام 2015 بهدف تقديم تجارب سياحية مميزة تلبي احتياجات المتقاعدين المغاربة.</p>
+                <p class="about-text">خلال السنوات الماضية، ساعدنا أكثر من 1200 متقاعد ومتقاعدة على اكتشاف جمال المغرب والعالم بطرق مريحة وآمنة، مع الحفاظ على جو عائلي ودافئ.</p>
+                
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div>
+                            <h4>خبرة واسعة</h4>
+                            <p>أكثر من 8 سنوات في تنظيم رحلات خاصة بالمتقاعدين</p>
+                        </div>
+                        <i class="fas fa-award about-feature-icon"></i>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <div>
+                            <h4>فريق متخصص</h4>
+                            <p>مرشدون سياحيون ومرافقون طبيون مدربون على التعامل مع كبار السن</p>
+                        </div>
+                        <i class="fas fa-users about-feature-icon"></i>
+                    </div>
+                    
+                    <div class="about-feature">
+                        <div>
+                            <h4>شركاء موثوقون</h4>
+                            <p>تعاون مع أفضل الفنادق وشركات النقل لتقديم خدمة مميزة</p>
+                        </div>
+                        <i class="fas fa-handshake about-feature-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="section cta">
+        <div class="container cta-content">
+            <h2 class="cta-title">جاهزون لرحلة العمر؟</h2>
+            <p class="cta-text">اتصل بنا اليوم لمعرفة المزيد عن رحلاتنا القادمة واحجز مقعدك في تجربة سياحية لن تنساها</p>
+            <a href="#contact" class="btn">تواصل معنا</a>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">تواصل معنا</span>
+                <h2 class="section-title">نحن هنا لمساعدتك</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="contact-title">هاتف</h4>
+                            <a href="tel:+212612345678" class="contact-detail">RABAT 0660306684</a>
+                            <a href="tel:+212612345678" class="contact-detail">CASA 0770970012</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="contact-title">بريد إلكتروني</h4>
+                            <a href="mailto:info@retired-travel.ma" class="contact-detail">ajadess1@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="contact-title">العنوان</h4>
+                            <p class="contact-detail">امل واحد ج  5 حي يعقوب المنصور الرباط .</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/212660306684" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                    </a>
+                </div>
+                
+                <div class="google-form-wrapper" style="flex: 1 1 600px; max-width: 600px; direction: rtl; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <iframe 
+          src="https://docs.google.com/forms/d/1Cr2T_PKA_Yr6FW68Qt0irHWndjyHvGR_EFP9_i_ZpGA/viewform?pli=1&chromeless=1&pli=1&edit_requested=true" 
+          width="100%" 
+          height="700" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          style="border:1px solid #ccc; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1);"
+          aria-label="نموذج التسجيل"
+        >
+          جاري تحميل النموذج…
+        </iframe>
+      </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">جمعية بلا حدود <span>لتنمية والتنشيط السياحي</span></a>
+                    <p class="footer-text">نقدم تجارب سياحية فريدة للمتقاعدين المغاربة، مع التركيز على الراحة والأمان والاستمتاع بوتيرة هادئة.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61555189616995" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://facebook.com/groups/1411702783018757/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@karimrabatvoyagaes?si=lZ1s48XJQDdQJt-Q" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">الرئيسية</a></li>
+                        <li><a href="#destinations" class="footer-link">الرحلات</a></li>
+                        <li><a href="#features" class="footer-link">لماذا نحن؟</a></li>
+                        <li><a href="#about" class="footer-link">من نحن</a></li>
+                        <li><a href="#contact" class="footer-link">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">الرحلات القادمة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">الصويرة - يناير 2024</a></li>
+                        <li><a href="#" class="footer-link">وادي دادس - مارس 2024</a></li>
+                        <li><a href="#" class="footer-link">طنجة - مايو 2024</a></li>
+                        <li><a href="#" class="footer-link">تركيا - سبتمبر 2024</a></li>
+                        <li><a href="#" class="footer-link">الأندلس - نوفمبر 2024</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">النشرة البريدية</h3>
+                    <p class="footer-text">اشترك لتصلك آخر العروض والرحلات الجديدة</p>
+                    <form class="footer-newsletter">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">اشترك الآن</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 جمعية بلا حدود لتنمية والتنشيط السياحي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // العناصر الأساسية
+        const headerSlider = document.querySelector('.header-slider');
+        const slides = document.querySelectorAll('.header-slide');
+        const dots = document.querySelectorAll('.header-dot');
+        let currentIndex = 0;
+        let slideInterval;
+        const slideDuration = 5000; // 5 ثواني
+        
+        // تهيئة السلايدر
+        function initSlider() {
+            // تعيين العرض الدقيق لكل شريحة
+            slides.forEach(slide => {
+                slide.style.width = `${headerSlider.offsetWidth}px`;
+            });
+            
+            // بدء التشغيل التلقائي
+            startAutoSlide();
+            
+            // إضافة أحداث للنقاط
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                    resetAutoSlide();
+                });
+            });
+            
+            // إيقاف التشغيل التلقائي عند التحويم
+            headerSlider.addEventListener('mouseenter', pauseAutoSlide);
+            headerSlider.addEventListener('mouseleave', startAutoSlide);
+        }
+        
+        // الانتقال لشريحة محددة
+        function goToSlide(index) {
+            // التأكد من أن المؤشر ضمن الحدود
+            currentIndex = (index + slides.length) % slides.length;
+            
+            // إخفاء جميع الشرائح
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // إظهار الشريحة الحالية
+            slides[currentIndex].classList.add('active');
+            
+            // تحديث النقاط النشطة
+            updateDots();
+        }
+        
+        // تحديث النقاط
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // التشغيل التلقائي
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, slideDuration);
+        }
+        
+        // إيقاف التشغيل التلقائي
+        function pauseAutoSlide() {
+            clearInterval(slideInterval);
+        }
+        
+        // إعادة تعيين التشغيل التلقائي
+        function resetAutoSlide() {
+            pauseAutoSlide();
+            startAutoSlide();
+        }
+        
+        // تهيئة السلايدر عند تحميل الصفحة
+        if (slides.length > 0) {
+            initSlider();
+        }
+        
+        // إعادة تهيئة السلايدر عند تغيير حجم النافذة
+        window.addEventListener('resize', () => {
+            slides.forEach(slide => {
+                slide.style.width = `${headerSlider.offsetWidth}px`;
+            });
+        });
+        
+        // القائمة المتنقلة
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // إخفاء القائمة عند النقر على رابط
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // تأثير التمرير للنافبار
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,                // يتحرك في حلقة
+    autoplay: {                // تلقائي
+      delay: 3000,             // 3 ثواني بين الصور
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+</body>
+</html>
