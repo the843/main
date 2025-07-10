@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رحلات المتقاعدين</title></title>
+    <title>رحلة العمر للمتقاعدين | اكتشف جمال المغرب بوتيرة هادئة</title>
     <meta name="description" content="رحلات سياحية فاخرة مصممة خصيصًا للمتقاعدين، اكتشف المغرب بكل راحة وأمان مع خبرائنا">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1133,63 +1133,54 @@
         </div>
     </section>
     
-    <!-- Destinations -->
-    <section class="section destinations" id="destinations">
-        <div class="container">
-            <div class="text-center">
-                <span class="section-subtitle">اكتشف أجمل الوجهات</span>
-                <h2 class="section-title">رحلاتنا المميزة</h2>
+   <!-- Destinations -->
+<section class="section destinations" id="destinations">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-subtitle">اكتشف أجمل الوجهات</span>
+      <h2 class="section-title">رحلاتنا المميزة</h2>
+    </div>
+
+    <div class="destinations-grid">
+      <!-- محتوى البطاقات القديم سيتم استبداله بالسكريبت -->
+    </div>
+
+    <div class="text-center" style="margin-top: 50px;">
+      <a href="#contact" class="btn">احجز رحلتك الآن</a>
+    </div>
+  </div>
+</section>
+
+<script>
+  fetch("https://opensheet.elk.sh/1cmWuNfBjfKQq46VX0Aughc71fAaKoDGx1RnJla4LXs4/Destinations")
+    .then(res => res.json())
+    .then(data => {
+      const grid = document.querySelector(".destinations-grid");
+      grid.innerHTML = ""; // نفضي المحتوى القديم
+      data.forEach(dest => {
+        grid.innerHTML += `
+          <div class="destination-card">
+            ${dest.tag ? `<span class="destination-tag">${dest.tag}</span>` : ""}
+            <img src="${dest.image}" alt="${dest.title}" class="destination-image">
+            <div class="destination-content">
+              <h3 class="destination-title">${dest.title}</h3>
+              <div class="destination-meta">
+                <span><i class="fas fa-calendar-alt"></i> ${dest.days}</span>
+                <span><i class="fas fa-users"></i> ${dest.people}</span>
+              </div>
+              <p>${dest.description}</p>
+              <div class="destination-price">${dest.price}</div>
             </div>
-            
-            <div class="destinations-grid">
-                <div class="destination-card">
-                    <span class="destination-tag">الأكثر طلبًا</span>
-                    <img src="https://i.ibb.co/W4gfmbBc/eda9d996-d416-4c8f-8209-db94e4ad797c.jpg" alt="شفشاون" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">أكادير</h3>
-                        <div class="destination-meta">
-                            <span><i class="fas fa-calendar-alt"></i> "3" أيام</span>
-                            <span><i class="fas fa-users"></i> عشرون شخص</span>
-                        </div>
-                        <p>حيث الرمال الذهبية و المضايق العالية و الشواطئ النقية كل هذا و اكثر في رحلة واحدة.
-♍بثمن جد مناسب   . سارعوا بحجز مقعدكم.</p>
-                        <div class="destination-price">1500 درهم</div>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="مراكش" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">مراكش الحمراء</h3>
-                        <div class="destination-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 4 أيام</span>
-                            <span><i class="fas fa-users"></i> مجموعة صغيرة</span>
-                        </div>
-                        <p>اكتشف سحر المدينة الحمراء مع جولات في الحدائق التاريخية، والسوق القديم، مع فترات راحة كافية.</p>
-                        <div class="destination-price">2,500 درهم</div>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <span class="destination-tag">جديد</span>
-                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="الصحراء المغربية" class="destination-image">
-                    <div class="destination-content">
-                        <h3 class="destination-title">الصحراء المغربية</h3>
-                        <div class="destination-meta">
-                            <span><i class="fas fa-calendar-alt"></i> 5 أيام</span>
-                            <span><i class="fas fa-users"></i> 15 شخص</span>
-                        </div>
-                        <p>تجربة لا تنسى في أحضان الصحراء مع رحلات الجمال ومبيت في الخيام الفاخرة تحت النجوم.</p>
-                        <div class="destination-price">3,200 درهم</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center" style="margin-top: 50px;">
-                <a href="#contact" class="btn">احجز رحلتك الآن</a>
-            </div>
-        </div>
-    </section>
+          </div>
+        `;
+      });
+    })
+    .catch(err => {
+      console.error("حدث خطأ في تحميل البيانات:", err);
+      document.querySelector(".destinations-grid").innerHTML = "<p>خطأ في تحميل الرحلات، حاول مرة أخرى لاحقاً.</p>";
+    });
+</script>
+
     
     <!-- Testimonials -->
     <section class="section testimonials">
